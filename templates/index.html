@@ -32,7 +32,7 @@
 <!-- Navbar-->
             <nav class="navbar navbar-expand-lg" id="mainNav">
                 <div class="container px-4 px-lg-5 navbar-styles">
-                    <a class="navbar-brand nav-text nav-home">Claudia Church</a>
+                    <a class="navbar-brand nav-text nav-home">CloudComp.</a>
                     <button class="navbar-toggler nav-text" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                         Menu
                         <i class="fas fa-bars"></i>
@@ -49,33 +49,25 @@
             </nav>
         </header>
 
-<!--        <img class="main-img" src="static/hoodie1.png">-->
-
     <section id="home">
-    <div class="home-styling">
+    <div class="home-styling" >
     <main class="px-3">
-        <div class="row">
-            <div class="col-lg-4 col-home">
-                <p class="name-title-ptag">< h1 ></p>
-                <p class="name-title">Hi I'm Claudia,</p>
-                <p class="name-title-ptag">< /h1 ></p>
-                <p class="name-title-ptag">< h1 ></p>
-                <p class="name-title">A Full-Stack</p>
-                <p class="name-title">Web Developer</p>
-                <p class="name-title-ptag">< /h1 ></p>
-            </div>
-            <div class="col-lg-4 col-home">
-                <img class="main-img" src="static/sunset.png">
-            </div>
-            <div class="col-lg-4 col-home">
-                <p class="sub-title-ptag"> < p > </p>
-                <p class="sub-title"> back-end python coder specialising in flask framework </p>
-                <p class="sub-title-ptag"> < /p > </p>
-                <p class="sub-title-ptag"> < p > </p>
-                <p class="sub-title">front-end html & css designer, have a look at my portfolio to see my websites</p>
-                <p class="sub-title-ptag"> < /p > </p>
-            </div>
-        </div>
+            <div class="row home-row">
+                <div class="col-lg-6 col-home-header">
+                        <p class="name-title">Hey,</p>
+                        <p class="name-title">I'm Claudia,</p>
+                        <p class="name-title">A Full-Stack</p>
+                        <p class="name-title">Web Developer</p>
+                        <p class="sub-title"><span class="sub-title-ptag"> < p > </span>back-end python coder <span class="sub-title-ptag">< /p ></span></p>
+                        <p class="sub-title"><span class="sub-title-ptag"> < p ></span> front-end html & css designer <span class="sub-title-ptag">< /p ></span> </p>
+                        <button class="send-btn-home"><a href="#portfolio" class="btn-a">View my work</a></button>
+                        <button class="send-btn-home"><a href="#contact" class="btn-a">Contact me</a></button>
+                    </div>
+                    <div class="col-img col-lg-6">
+                        <img class="main-img" src="static/sunset-modified.png">
+                    </div>
+
+                </div>
     </main>
     </div>
     </section>
@@ -167,11 +159,11 @@
     <div id="flash-message">
         {% with messages = get_flashed_messages() %}
         {% if messages %}
-            <ul class=flashes>
+            <div class=flashes>
             {% for message in messages %}
-                <li>{{ message }}</li>
+                <p>{{ message }}</p>
             {% endfor %}
-            </ul>
+            </div>
         {% endif %}
         {% endwith %}
     </div>
@@ -179,7 +171,7 @@
     <form method="post">
         {{ form.hidden_tag() }}
         <div class="row form-row">
-            <div class="col-lg-6 col-md-6 left-row">
+            <div class="col-lg-6 col-md-12 left-row">
                 <div class="row">
                     {{ form.email.label(class="email-label") }}
                 </div>
@@ -193,7 +185,7 @@
                     {{ form.subject(class="email-entry subj-form") }}
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 right-row">
+            <div class="col-lg-6 col-md-12 right-row">
                 <div class="row">
                     {{ form.message.label(class="email-label") }}
                 </div>
