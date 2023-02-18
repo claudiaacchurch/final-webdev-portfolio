@@ -9,12 +9,11 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 ckeditor = CKEditor(app)
 
-today = datetime.now()
-
 
 @app.route("/", methods=["GET", "POST"])
 def home():
     form = ContactForm()
+    today = datetime.now()
     today_year = today.strftime("%Y")
     email = os.environ.get('MY_EMAIL')
     password = os.environ.get('MY_PASSWORD')
@@ -36,6 +35,13 @@ def home():
         flash("Email sent successfully!")
         return redirect("/#flash-message")
     return render_template("index.html", year=today_year, form=form)
+
+
+@app.route("/cv", methods=["GET", "POST"])
+def cv():
+    today = datetime.now()
+    today_year = today.strftime("%Y")
+    return render_template("cv.html", year=today_year)
 
 
 if __name__ == '__main__':

@@ -1,87 +1,45 @@
 <!doctype html>
 <html lang="en" class="h-100">
-
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-        <meta name="generator" content="Hugo 0.108.0">
-        <title>Claudia Church</title>
-        <!-- Bootstrap -->
-        <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
-        <link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-        <!--Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Gelasio&family=Lato:wght@100;300;400&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Raleway+Dots&family=Raleway:wght@100;200&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-        <!-- Custom styles for this template -->
-        <link href="cover.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-        <!-- Font awesome -->
-        <script src="https://kit.fontawesome.com/2307716659.js" crossorigin="anonymous"></script>
-        <!-- My CSS-->
-        <link rel="stylesheet" href="static/styles.css">
-    </head>
-
-    <body class="d-flex h-100 text-center text-bg-dark">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-    <div class="bg-color">
-        <header class="mb-auto header-styles">
-<!-- Navbar-->
-            <nav class="navbar navbar-expand-lg" id="mainNav">
-                <div class="container px-4 px-lg-5 navbar-styles">
-                    <a class="navbar-brand nav-text nav-home">CloudComp.</a>
-                    <button class="navbar-toggler nav-text" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                        Menu
-                        <i class="fas fa-bars"></i>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarResponsive">
-                        <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                            <li class="nav-item a"><a class="nav-link px-lg-3 py-3 py-lg-4 nav-text" href="#home">home</a></li>
-                            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 nav-text" href="#portfolio">portfolio</a></li>
-                            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 nav-text" href="#contact">contact</a></li>
-                            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 nav-text" href="https://github.com/claudiaacchurch?tab=repositories"><i class="fa-brands fa-github fa-lg icons git-icons"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
+{% include 'header.html' %}
 
     <section id="home">
     <div class="home-styling" >
     <main class="px-3">
-            <div class="row home-row">
-                <div class="col-lg-6 col-home-header">
-                        <p class="name-title">Hey,</p>
-                        <p class="name-title">I'm Claudia,</p>
-                        <p class="name-title">A Full-Stack</p>
-                        <p class="name-title">Web Developer</p>
-                        <p class="sub-title"><span class="sub-title-ptag"> < p > </span>back-end python coder <span class="sub-title-ptag">< /p ></span></p>
-                        <p class="sub-title"><span class="sub-title-ptag"> < p ></span> front-end html & css designer <span class="sub-title-ptag">< /p ></span> </p>
-                        <button class="send-btn-home"><a href="#portfolio" class="btn-a">View my work</a></button>
-                        <button class="send-btn-home"><a href="#contact" class="btn-a">Contact me</a></button>
-                    </div>
-                    <div class="col-img col-lg-6">
-                        <img class="main-img" src="static/sunset-modified.png">
-                    </div>
+<div class="container my-container">
+  <div class="row home-row">
+    <div class="col-sm-12 col-lg-6 col-home-text">
+      <p class="name-title">Hey,</p>
+      <p class="name-title">I'm Claudia;</p>
+      <p class="name-title">Full-Stack</p>
+      <p class="name-title">Web Developer</p>
+      <p class="sub-title sub-top"><span class="sub-title-ptag"> < p > </span>back-end python coder <span class="sub-title-ptag">< /p ></span></p>
+      <p class="sub-title sub-bottom"><span class="sub-title-ptag"> < p ></span> front-end html & css designer <span class="sub-title-ptag">< /p ></span> </p>
+      <div class="col-home-buttons">
+        <a class="send-btn-home contact-btn" href="#contact">Contact me</a>
+        <a class="send-btn-home portfolio-btn" href="#portfolio">View my work<i class="fa-solid fa-arrow-right arrow-work"></i></a>
+      </div>
+    </div>
+    <div class="col-sm-12 col-lg-6 col-home-img">
+      <img class="main-img" src="static/sunset-modified.png">
+    </div>
+  </div>
+</div>
 
-                </div>
+
     </main>
     </div>
     </section>
 
-    <div class="b-example-divider"></div>
-
     <section id="portfolio">
+
+    <div class="b-example-divider"></div>
 
     <div class="portfolio-title-box">
         <h1 class="portfolio-header">my_portfolio</h1>
     </div>
 
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-sm-12 col-lg-6">
 
             <div class="carousel-measurements">
                 <div id="myCarousel" class="carousel slide" data-interval="false">
