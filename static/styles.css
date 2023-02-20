@@ -20,6 +20,7 @@ body {
     position: relative;
     z-index: 1;
     border-image-slice: 30;
+    min-height: 75vh;
 }
 
 /* Navbar */
@@ -83,7 +84,7 @@ body {
 /* Header section */
 
 .home-row {
-margin-top: 8%;
+margin-top: 10%;
 }
 
 .col-home-text {
@@ -574,9 +575,12 @@ padding-right: 2px;
 }
 
 /* For medium to large screens */
-@media only screen and (max-width: 950px) and (min-width: 769px) {
+@media only screen and (max-width: 970px) and (min-width: 769px) {
+.home-styling {
+min-height: 60vh;
+}
   .home-row {
-    margin-top: 8%;
+    margin-top: 10%;
   }
 
   .col-home-text {
